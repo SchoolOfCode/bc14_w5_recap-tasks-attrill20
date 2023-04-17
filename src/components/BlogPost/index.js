@@ -1,6 +1,7 @@
 import React from 'react'
+import './style.css'
 
-function BlogPost() {
+function BlogPost(props) {
   const blog = { // this is the sample blog
     title: "My First Post",
     author: "Chris Meah",
@@ -25,16 +26,7 @@ function BlogPost() {
       <small className="caption">{blog.imageAlt}</small>
       <p></p>
       <div dangerouslySetInnerHTML={{ __html: blog.content }} />
-      <style jsx>{` 
-        .caption {
-          font-size: 0.8em;
-          display: block;
-          margin-top: 0.5em;
-        }
-        img {
-          max-width: 40%;
-        }
-      `}</style>
+      
     </div>
   );
 }

@@ -1,0 +1,10 @@
+ .caption {
+      font-size: 0.8em;
+      display: block;
+      margin-top: 0.5em;
+        font-style: italic;
+    }
+
+img {
+      max-width: 40%;
+    }
