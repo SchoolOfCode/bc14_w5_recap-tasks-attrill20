@@ -1,9 +1,19 @@
 import React from 'react'
-import BlogPost from "./index.js";
+import BlogPost from "../BlogPost";
 
 
 function App() {
-  return null;
+  return (
+    <div>
+      <BlogPost />
+   
+     
+  
+
+
+
+    </div>
+  )
 }
 
 export default App;
