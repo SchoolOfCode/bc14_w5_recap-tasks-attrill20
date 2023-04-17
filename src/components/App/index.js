@@ -27,8 +27,8 @@ function App() {
       <p></p>
       <Comment author="Ben Lee" content="Hello, great post!" />
       <Comment author="Jane Ashley Green" content="I completely agree!" />
-      <CommentList comments={comments} />
-      <CommentForm onSubmit={addComment} />
+      <CommentList comments= {comments} />
+      <CommentForm onSubmit= {addComment} />
      
   
 
