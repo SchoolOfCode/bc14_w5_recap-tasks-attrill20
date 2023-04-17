@@ -1,14 +1,14 @@
 import React from 'react';
 import './style.css';
 
-function Comment(props) {
+function Comment(props) { // define the props
   const { author, content } = props;
   const initials = author
     .split(' ')
     .map(name => name.charAt(0).toUpperCase())
     .join('');
 
-  return (
+  return ( // this is what is returned to the app.js using the above info
     <div className="comment">
       <div className="initials">{initials}</div>
         
