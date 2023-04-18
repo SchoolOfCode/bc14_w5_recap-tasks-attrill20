@@ -20,7 +20,7 @@ function App() {
         content: "Many thank yous",
       },
   ]);
-// commented this section out here 
+// commented this section out here:
 
   // const addComment = (author, comment) => {
   //   const newComment = {
