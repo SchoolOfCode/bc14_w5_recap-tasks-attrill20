@@ -1,14 +1,15 @@
 import { useState } from "react";
 import React from 'react'
 
-function CommentForm({ onSubmit }) {
+function CommentForm({ props }) {
+  const {setComments, comments } = props;
   const [author, setAuthor] = useState("Anon Author");
   const [comment, setComment] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (comment.trim() !== "") {
-      onSubmit({ author, comment });
+      setComments([...comments, { author: author, content: comment }]);
       setComment("");
     }
   };
