@@ -1,18 +1,26 @@
+import React from "react";
 import { useState } from "react";
-import React from 'react'
 
-function CommentForm({ props }) {
+
+function CommentForm(props) {
+// put props in smoothies above
+
+// deconstructed the props here
   const {setComments, comments } = props;
+
   const [author, setAuthor] = useState("Anon Author");
   const [comment, setComment] = useState("");
 
-  const handleSubmit = (event) => {
+  // made this into a function...
+  // to be called when pressing submit on the form
+  function handleSubmit(event) {
+    // prevent the default behaviour of the form (refreshing the page)
     event.preventDefault();
-    if (comment.trim() !== "") {
-      setComments([...comments, { author: author, content: comment }]);
-      setComment("");
+    setComments([...comments, { author: author, content: comment }]);
+    // reset the form
+    setAuthor("Anon Author");
+    setComment("");
     }
-  };
 
   const handleAuthorChange = (event) => {
     setAuthor(event.target.value);
@@ -31,6 +39,8 @@ function CommentForm({ props }) {
           type="text"
           value={author}
           onChange={handleAuthorChange}
+          // add required to force an input
+          required
         />
       </div>
       <div>
@@ -39,6 +49,8 @@ function CommentForm({ props }) {
           id="comment"
           value={comment}
           onChange={handleCommentChange}
+           // add required to force an input
+          required
         />
       </div>
       <button type="submit">Submit</button>

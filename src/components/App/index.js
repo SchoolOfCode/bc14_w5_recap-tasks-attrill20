@@ -20,15 +20,16 @@ function App() {
         content: "Many thank yous",
       },
   ]);
+// commented this section out here 
 
-  const addComment = (author, comment) => {
-    const newComment = {
-      id: Math.random().toString(36).substr(2, 9),
-      author,
-      content: comment,
-    };
-    setComments([...comments, newComment]);
-  };
+  // const addComment = (author, comment) => {
+  //   const newComment = {
+  //     id: Math.random().toString(36).substr(2, 9),
+  //     author,
+  //     content: comment,
+  //   };
+  //   setComments([...comments, newComment]);
+  // };
 
 
   return (
@@ -37,7 +38,8 @@ function App() {
       <BlogPost blog={blog} /> 
       <p></p>
       <CommentList comments= {comments} />
-      <CommentForm onSubmit= {addComment} setComments={setComments} comments={comments}/>
+      {/* // removed the addcomment prop below */}
+      <CommentForm setComments={setComments} comments={comments}/>
      
     </div>
   )
